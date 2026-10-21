@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Register</title>
+  <style>
+    html, body { margin: 0; height: 100%; font-family: 'Times New Roman', Times, serif; background: #eef2f1; }
+    .page { width: 100%; height: 100%; border-collapse: collapse; }
+    .top, .bottom { background: rgb(235, 156, 235); color: black; text-align: center; padding: 18px; }
+    .top, .bottom { height: 70px; }
+    .login { background: rgb(254, 217, 254); border: 1px solid #c9d6d3; padding: 10px; }
+    .login td { padding: 8px 10px; }
+    .login input[type=text], .login input[type=password], .login select { width: 220px; padding: 7px; }
+    body {
+        background-color: rgb(254, 217, 254);
+    }
+  </style>
+  <script>
+    function check() {
+      if (document.getElementById('pw').value !== document.getElementById('rpw').value) {
+        alert('Passwords do not match.');
+        return false;
+      }
+      return true;
+    }
+  </script>
+</head>
+<body>
+
+<table class="page">
+
+  <!-- HEADER -->
+  <tr>
+    <td class="top">
+      <h1 style="margin:0;">My Website</h1>
+      <p style="margin:4px 0 0;">Login &amp; Registration</p>
+    </td>
+  </tr>
+
+  <!-- CENTER CONTENT -->
+  <tr>
+    <td align="center" valign="middle">
+      <form action="third.html" method="get" onsubmit="return check()">
+        <table class="login">
+          <tr>
+            <td colspan="2" align="center"><h2 style="margin:0;">Register</h2></td>
+          </tr>
+          <tr>
+            <td><label for="ln">Login Name</label></td>
+            <td><input type="text" id="ln" name="loginname" required></td>
+          </tr>
+          <tr>
+            <td><label for="pw">Enter Password</label></td>
+            <td><input type="password" id="pw" name="password" required></td>
+          </tr>
+          <tr>
+            <td><label for="rpw">Re-enter Password</label></td>
+            <td><input type="password" id="rpw" name="repassword" required></td>
+          </tr>
+          <tr>
+            <td>Gender</td>
+            <td>
+              <input type="radio" id="m" name="gender" value="Male" required> <label for="m">Male</label>
+              <input type="radio" id="f" name="gender" value="Female"> <label for="f">Female</label>
+              <input type="radio" id="o" name="gender" value="Other"> <label for="o">Other</label>
+            </td>
+          </tr>
+          <tr>
+            <td><label for="c">Country</label></td>
+            <td>
+              <select id="c" name="country" required>
+                <option value="">-- Select Country --</option>
+                <option>Pakistan</option>
+                <option>United States</option>
+                <option>United Kingdom</option>
+                <option>Saudi Arabia</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td><label for="con">Contact</label></td>
+            <td><input type="text" id="con" name="Contact" required></td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <input type="checkbox" id="ag" name="agree" required>
+              <label for="ag">I agree</label>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2" align="center"><input type="submit" value="Register"></td>
+          </tr>
+        </table>
+      </form>
+    </td>
+  </tr>
+
+  <!-- FOOTER -->
+  <tr>
+    <td class="bottom">&copy; 2026 My Website. All rights reserved.</td>
+  </tr>
+
+</table>
+
+</body>
+</html>
